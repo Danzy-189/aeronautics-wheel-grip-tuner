@@ -1,4 +1,18 @@
 {
   "item.wheel_grip_tuner.grip_tuner": "Настройщик сцепления колёс",
-  "message.wheel_grip_tuner.adjusted": "Сцепление с дорогой: %s"
+  "message.wheel_grip_tuner.adjusted": "%s: %s",
+  "message.wheel_grip_tuner.mode": "Режим инструмента: %s",
+  "message.wheel_grip_tuner.diff_first": "Выбрано первое колесо дифференциала",
+  "message.wheel_grip_tuner.diff_first_missing": "Первое колесо недоступно; выбрано текущее",
+  "message.wheel_grip_tuner.diff_paired": "Колёса объединены в LSD-дифференциал",
+  "message.wheel_grip_tuner.diff_unpaired": "Дифференциал разъединён",
+  "message.wheel_grip_tuner.diff_mode": "Дифференциал: %s",
+  "mode.wheel_grip_tuner.grip": "Сцепление с дорогой",
+  "mode.wheel_grip_tuner.ride_height": "Высота подвески",
+  "mode.wheel_grip_tuner.suspension_travel": "Ход подвески",
+  "mode.wheel_grip_tuner.contact_radius": "Радиус контакта",
+  "mode.wheel_grip_tuner.differential": "Дифференциал",
+  "mode.wheel_grip_tuner.diff.open": "Открытый",
+  "mode.wheel_grip_tuner.diff.limited_slip": "Ограниченного проскальзывания",
+  "mode.wheel_grip_tuner.diff.locked": "Заблокированный"
 }

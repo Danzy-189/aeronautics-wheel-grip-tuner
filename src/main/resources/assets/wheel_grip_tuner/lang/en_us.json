@@ -1,4 +1,18 @@
 {
   "item.wheel_grip_tuner.grip_tuner": "Wheel Grip Tuner",
-  "message.wheel_grip_tuner.adjusted": "Road grip: %s"
+  "message.wheel_grip_tuner.adjusted": "%s: %s",
+  "message.wheel_grip_tuner.mode": "Tuner mode: %s",
+  "message.wheel_grip_tuner.diff_first": "First differential wheel selected",
+  "message.wheel_grip_tuner.diff_first_missing": "The first wheel is unavailable; selected this wheel instead",
+  "message.wheel_grip_tuner.diff_paired": "Differential axle paired (limited-slip)",
+  "message.wheel_grip_tuner.diff_unpaired": "Differential axle disconnected",
+  "message.wheel_grip_tuner.diff_mode": "Differential: %s",
+  "mode.wheel_grip_tuner.grip": "Road grip",
+  "mode.wheel_grip_tuner.ride_height": "Ride height",
+  "mode.wheel_grip_tuner.suspension_travel": "Suspension travel",
+  "mode.wheel_grip_tuner.contact_radius": "Contact radius",
+  "mode.wheel_grip_tuner.differential": "Differential",
+  "mode.wheel_grip_tuner.diff.open": "Open",
+  "mode.wheel_grip_tuner.diff.limited_slip": "Limited-slip",
+  "mode.wheel_grip_tuner.diff.locked": "Locked"
 }
