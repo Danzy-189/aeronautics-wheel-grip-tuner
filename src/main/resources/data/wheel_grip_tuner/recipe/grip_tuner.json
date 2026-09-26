@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " I ",
+    " SI",
+    "S  "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": {
+    "id": "wheel_grip_tuner:grip_tuner",
+    "count": 1
+  }
+}

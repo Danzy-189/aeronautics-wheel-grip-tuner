@@ -1,0 +1,41 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "Danzy-189"
+description = '''Adds a handheld tool for tuning lateral grip on Create: Aeronautics Offroad wheel mounts. Lower grip can reduce vehicle rollovers during sharp turns.'''
+
+[[mixins]]
+config = "wheel_grip_tuner.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neo_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "offroad"
+type = "required"
+versionRange = "[1.0.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "tracks"
+type = "optional"
+versionRange = "[1.0.1,)"
+ordering = "AFTER"
+side = "BOTH"

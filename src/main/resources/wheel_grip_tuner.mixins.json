@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.danzy189.wheelgriptuner.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "WheelMountGripMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
