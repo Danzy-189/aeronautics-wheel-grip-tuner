@@ -34,7 +34,7 @@ public final class GripTunerItem extends Item {
                 player.displayClientMessage(
                         Component.translatable(
                                 "message.wheel_grip_tuner.adjusted",
-                                String.format(Locale.ROOT, "%.2fx", value)
+                                String.format(Locale.ROOT, "%.0f%%", value * 100.0)
                         ).withStyle(value < 1.0 ? ChatFormatting.GREEN : ChatFormatting.GOLD),
                         true
                 );
