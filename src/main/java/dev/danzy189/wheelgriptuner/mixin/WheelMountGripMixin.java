@@ -1,5 +1,6 @@
 package dev.danzy189.wheelgriptuner.mixin;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import dev.danzy189.wheelgriptuner.api.GripTunableWheel;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -10,9 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(targets = "dev.ryanhcode.offroad.content.blocks.wheel_mount.WheelMountBlockEntity", remap = false)
@@ -85,15 +84,14 @@ public abstract class WheelMountGripMixin implements GripTunableWheel {
     }
 
     /**
-     * Aeronautics applies lateral tire force with the -0.6 coefficient in
-     * WheelMountBlockEntity#sable$physicsTick. Scaling that coefficient changes
-     * lateral grip without changing drive force or suspension stiffness.
+     * MixinExtras wraps the final constant expression instead of claiming the
+     * constant instruction. This allows Tracks+ and this addon's multipliers
+     * to compose instead of causing a competing @ModifyConstant injection.
      */
-    @ModifyConstant(
+    @ModifyExpressionValue(
             method = "sable$physicsTick",
-            constant = @Constant(doubleValue = -0.6),
-            remap = false,
-            require = 1
+            at = @At(value = "CONSTANT", args = "doubleValue=-0.6"),
+            remap = false
     )
     private double wheelGripTuner$scaleLateralGrip(double original) {
         return original * wheelGripTuner$gripMultiplier;
